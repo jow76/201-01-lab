@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1 Lab</title>
+    <meta name="description" content="This is my page about the 201-01."/>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1{
+            font-size: 3em;
+            color:black;
+            background-color: green;
+            text-align: center;
+        }
+        p{
+            font-size: 1rem;
+            color:white;
+            margin-top: 3px;
+        }
+        body{
+            background-color: rgb(8, 54, 8);
+        }
+    </style>
+    <script>
+        let userName;
+        let myAge=22;
+        let userAge;
+        let favColor;
+        let favAnimal;
+        function getName(){
+            userName=prompt("Hello! Please enter your name!");
+            console.log(userName);
+        }
+        function getAge(){
+            userAge=prompt("Hi, " + userName + "! How old are you?");
+            console.log(userAge);
+            if(userAge==myAge){
+                alert("Wow! We're the same age!");
+            }
+            else if(userAge>myAge){
+                let theAge = userAge - myAge;
+                console.log(theAge);
+                alert("Wow! You're " + theAge + " years older than me!");
+            }
+            else if(userAge<myAge){
+                let theAge = myAge - userAge;
+                alert("Wow! You're " + theAge + " years younger than me!");
+            }
+        }
+        function getColor(){
+            favColor=prompt("What's your favourite color?").toLowerCase();
+            console.log(favColor);
+        }
+        function getAnimal(){
+            favAnimal=prompt("And what is your favourite animal?").toLowerCase();
+            console.log(favAnimal);
+        }
+        getName();
+        getAge();
+        getColor();
+        getAnimal();
+    </script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Class 1 Lab</h1>
+        <p>
+            <script>
+                document.write(userName + " is " + userAge + " years old. Their favourite animal is the " + favAnimal + " and their favourite colour is " + favColor + ".")
+            </script>
+        </p>
+        <p class="question" id="Q1">How old am I?</p>
+        <p>I am 22 years old.</p>
+        <p class="question" id="Q2">What is my nickname?</p>
+        <p>My nickname is Jow.</p>
+        <p class="question" id="Q1">What is my favourite animal?</p>
+        <p>My favourite animal is the red panda.</p>
+        <p class="question" id="Q2">What is my favourite colour?</p>
+        <p>My favourite colour is green.</p>
+        <style>
+            .question{
+                font-size: 1.5rem;
+                margin-top: 15px;
+            }        
+            #Q1{
+                background-color: black;
+                max-width: fit-content;
+                color:white;
+            }
+            #Q2{
+                background-color:green;
+                max-width: fit-content;
+                color:black;
+            }
+        </style>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
